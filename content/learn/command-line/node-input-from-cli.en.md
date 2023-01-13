@@ -57,3 +57,22 @@ inquirer.prompt(questions).then(answers => {
 Inquirer.js lets you do many things like asking multiple choices, having radio buttons, confirmations, and more.
 
 It's worth knowing all the alternatives, especially the built-in ones provided by Node.js, but if you plan to take CLI input to the next level, Inquirer.js is an optimal choice.
+
+
+There's another easy method to ask for user input for simple uses when we need the user's input through the console. Below piece of code is an implementation of  promptSync
+```js
+import promptSync from 'prompt-sync'; 
+     const prompt = promptSync({sigint: true}); 
+
+//saving a string in a const variable 
+    const mb = 'Enter ToDo Of The Day: '
+
+//saving as string but if you want to take a number as input then add + before the prompt(example = +prompt(mb)
+
+let saveToDo = prompt(mb);
+
+//logging to console
+console.log(saveToDo)
+```
+
+
